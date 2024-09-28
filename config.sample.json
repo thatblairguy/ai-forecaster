@@ -1,0 +1,11 @@
+{
+    "email": "test@example.com",
+    "location": {
+        "latitude": 39.176,
+        "longitude": -77.3026
+    },
+    "ai": {
+        "server": "http://localhost:11434",
+        "model": "llama3.1:latest"
+    }
+}

@@ -1,0 +1,10 @@
+# Production
+aiohttp~=3.9
+astral
+pynws~=2.0
+ollama~=0.3
+
+# Development
+black==24.8.0
+isort==5.13.2
+pylint==3.2.7
