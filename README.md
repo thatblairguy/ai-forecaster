@@ -2,7 +2,7 @@
 
 Silly program to turn the weather forecast into something else via a GPT.
 
-Obtains the current weather from the US National Weather Service API (via [pynws](https://pypi.org/project/pynws/)) and runs it through a local GPT to transform it into a fun format.  (Currently hard-coded to Shakespearean sonnets.)
+Obtains the current weather from the US National Weather Service API (via [pynws](https://pypi.org/project/pynws/)) and runs it through a local GPT to transform it into a fun format.
 
 ## Setup
 
@@ -14,3 +14,5 @@ Obtains the current weather from the US National Weather Service API (via [pynws
 1. Under the `ai` key, set `server` to the system where ollama is installed.
     - If ollama is not installed on the same machine as the AI Forecaster program, you'll need to [configure ollama to accept external connections](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server)
 1. Under the `ai` key, set `model` to the same model that was installed in step 1.
+
+The `personalities` key is an array of "personality" objects.  For an individual object, the `persona` key describes the type of "person" the AI is impersonating (e.g. "Shakespearean scholar") and the `style` key is the writing style to use (e.g. "Shakespearean sonnet").

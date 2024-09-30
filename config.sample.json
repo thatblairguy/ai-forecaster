@@ -1,11 +1,29 @@
 {
     "email": "test@example.com",
     "location": {
-        "latitude": 39.176,
+        "latitude": 39.1761,
         "longitude": -77.3026
     },
     "ai": {
         "server": "http://localhost:11434",
         "model": "llama3.1:latest"
-    }
+    },
+    "personalities": [
+        {
+            "persona": "Shakespearean scholar",
+            "style": "Shakespearean sonnet"
+        },
+        {
+            "persona": "Field researcher for the Hitchhiker's Guide to the Galaxy",
+            "style": "Entry in the Hitchhiker's Guide to the Galaxy"
+        },
+        {
+            "persona": "grade school student",
+            "style": "pig latin"
+        },
+        {
+            "persona": "college graduate",
+            "style": "heavy use of alliteration"
+        }
+    ]
 }
