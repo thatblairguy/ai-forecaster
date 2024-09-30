@@ -1,4 +1,5 @@
 import asyncio
+import random
 
 import lib.config
 from lib.generator import Generator
@@ -12,20 +13,22 @@ async def main():
     gen = Generator(config.ai.host, config.ai.model)
     weatherGen = Weather(config.email, config.location)
 
-    role = "Shakespearean scholar"
-    style = "Shakespearean sonnet"
+    personality = random.choice(config.personalities)
     weather = await weatherGen.getForecast()
 
     prompt = (
-        f"You are a {role}.\n"
+        f"You are a(n) {personality.persona}.\n"
         f"Using the below WEATHERDATA, compose a report in the DESIGNATEDSTYLE\n"
         f"Do not include any extra notes/text.\n"
-        f"DESIGNATEDSTYLE: {style}\n"
+        f"DESIGNATEDSTYLE: {personality.style}\n"
         f"WEATHERDATA: {weather}"
     )
 
     text = await gen.generate(prompt)
     print(text)
+
+    print("\n\n---")
+    print(f"**STYLE:** {personality.style}")
 
 
 if __name__ == "__main__":
