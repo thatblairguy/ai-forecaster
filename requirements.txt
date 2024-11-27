@@ -1,8 +1,8 @@
 # Production
 aiohttp~=3.9
 astral
-pynws~=2.0
 ollama~=0.3
+pynws~=2.0
 
 # Development
 black==24.8.0
