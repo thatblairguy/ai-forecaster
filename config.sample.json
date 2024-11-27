@@ -1,13 +1,32 @@
 {
     "email": "test@example.com",
-    "location": {
-        "latitude": 39.1761,
-        "longitude": -77.3026
-    },
+    "locations": [
+        {
+            "city": "Germantown, MD",
+            "latitude": 39.1761,
+            "longitude": -77.3026
+        },
+        {
+            "city": "Honolulu, HI",
+            "latitude": 21.3279532,
+            "longitude": -157.9642266
+        },
+        {
+            "city": "Philadelphia, PA",
+            "latitude": 40.0026443,
+            "longitude": -75.2828375
+        },
+        {
+            "city": "Indianapolis, IN",
+            "latitude": 39.1761,
+            "longitude": -77.3026
+        }
+    ],
     "ai": {
         "server": "http://localhost:11434",
         "model": "llama3.1:latest"
     },
+    "output-location": "output",
     "personalities": [
         {
             "persona": "Shakespearean scholar",
