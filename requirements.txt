@@ -3,6 +3,7 @@ aiohttp~=3.9
 astral
 ollama~=0.3
 pynws~=2.0
+tenacity~=9.0
 
 # Development
 black==24.8.0
