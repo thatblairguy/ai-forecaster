@@ -52,6 +52,8 @@ async def main():
                 file.write(report)
 
     config = lib.config.load("config.json")
+    if config is None:
+        return
 
     gen = Generator(config.ai.host, config.ai.model)
     weather_gen = Weather(config.email)

@@ -24,6 +24,16 @@ class Configuration:
 
 
 def load(config_file: str, encoding='utf-8'):
-    with open(config_file) as f:
-        d = json.load(f)
-        return Configuration(d)
+    try:
+        with open(config_file, encoding=encoding) as f:
+            d = json.load(f)
+            return Configuration(d)
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON from {config_file}: {e}")
+        return None
+    except FileNotFoundError as e:
+        print(f"Configuration file not found: {e}")
+        return None
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return None
